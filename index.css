@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #618db1;
+}
+
+.homepage-body {
+    background-color: white;
+    padding: 6rem;
+    padding-top: 1rem;
+}
+
+.homepage-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.homepage-container > * {
+    display: flex;
+    background-color: #618db1;
+    margin: 1rem;
+    border-radius: .3rem;
+}
+
+.homepage-container > *:hover {
+    opacity: .8;
+}
+
+.btn-icon {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.primary-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #474747;
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    border-radius: .5rem;
+    border-bottom: .2rem solid #b5c4d0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.primary-btn:hover {
+    background-color: #b5c4d0;
+    color: white;
+}
+
+@keyframes growShrink {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.7, 1.7);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.scale-coin-size {
+    animation: growShrink 1s ease-in-out;
+    z-index: 0;
+}
+
+/* MEDIA QUERIES ******************************************************************/
+
+@media screen and (min-width: 600px) {
+    .homepage-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .homepage-body {
+        padding: 1rem;
+    }
+}
